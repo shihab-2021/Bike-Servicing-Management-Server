@@ -6,7 +6,6 @@ import prisma from "../../shared/prisma";
 const createService = async (payLoad: ServiceRecord) => {
   const { bikeId, serviceDate, description, status } = payLoad;
 
-  // Validate input
   if (!bikeId || !serviceDate || !description || !status) {
     throw new AppError(
       StatusCodes.BAD_REQUEST,
